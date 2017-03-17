@@ -11,6 +11,11 @@
 		4C45CA8F1D3A9A7F0030A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */; };
 		4C45CA941D3A9A7F0030A41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA931D3A9A7F0030A41D /* Assets.xcassets */; };
 		4C45CA971D3A9A7F0030A41D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C45CA951D3A9A7F0030A41D /* LaunchScreen.storyboard */; };
+		881B23E71E7C570B00287B40 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 881B23E51E7C570B00287B40 /* DataModel.xcdatamodeld */; };
+		881B23EA1E7C580300287B40 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B23E91E7C580300287B40 /* DataStore.swift */; };
+		881B23EE1E7C590900287B40 /* ShipsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B23ED1E7C590900287B40 /* ShipsTableViewController.swift */; };
+		881B23F01E7C592C00287B40 /* ShipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B23EF1E7C592C00287B40 /* ShipDetailViewController.swift */; };
+		881B23F41E7C672500287B40 /* PiratesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B23F31E7C672500287B40 /* PiratesTableViewController.swift */; };
 		8FD08F351E1EAF5D005FF50B /* swift_captain_morgans_relationships_labTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD08F341E1EAF5D005FF50B /* swift_captain_morgans_relationships_labTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +36,11 @@
 		4C45CA931D3A9A7F0030A41D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C45CA961D3A9A7F0030A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C45CA981D3A9A7F0030A41D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		881B23E61E7C570B00287B40 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		881B23E91E7C580300287B40 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		881B23ED1E7C590900287B40 /* ShipsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipsTableViewController.swift; sourceTree = "<group>"; };
+		881B23EF1E7C592C00287B40 /* ShipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipDetailViewController.swift; sourceTree = "<group>"; };
+		881B23F31E7C672500287B40 /* PiratesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiratesTableViewController.swift; sourceTree = "<group>"; };
 		8FD08F321E1EAF5D005FF50B /* swift-captain-morgans-relationships-labTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-captain-morgans-relationships-labTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD08F341E1EAF5D005FF50B /* swift_captain_morgans_relationships_labTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_captain_morgans_relationships_labTests.swift; sourceTree = "<group>"; };
 		8FD08F361E1EAF5D005FF50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,11 +95,32 @@
 		4C45CA881D3A9A7F0030A41D /* swift-captain-morgans-relationships-lab */ = {
 			isa = PBXGroup;
 			children = (
-				4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */,
+				881B23EB1E7C58E700287B40 /* Controllers */,
+				881B23E81E7C57EC00287B40 /* Models */,
 				4C45CA8D1D3A9A7F0030A41D /* Main.storyboard */,
+				4C45CA891D3A9A7F0030A41D /* AppDelegate.swift */,
 				1B885D9D1D3FE64B0029DFFC /* Resources */,
+				881B23E51E7C570B00287B40 /* DataModel.xcdatamodeld */,
 			);
 			path = "swift-captain-morgans-relationships-lab";
+			sourceTree = "<group>";
+		};
+		881B23E81E7C57EC00287B40 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				881B23E91E7C580300287B40 /* DataStore.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		881B23EB1E7C58E700287B40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				881B23F31E7C672500287B40 /* PiratesTableViewController.swift */,
+				881B23ED1E7C590900287B40 /* ShipsTableViewController.swift */,
+				881B23EF1E7C592C00287B40 /* ShipDetailViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		8FD08F331E1EAF5D005FF50B /* swift-captain-morgans-relationships-labTests */ = {
@@ -210,6 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				881B23F41E7C672500287B40 /* PiratesTableViewController.swift in Sources */,
+				881B23E71E7C570B00287B40 /* DataModel.xcdatamodeld in Sources */,
+				881B23EE1E7C590900287B40 /* ShipsTableViewController.swift in Sources */,
+				881B23EA1E7C580300287B40 /* DataStore.swift in Sources */,
+				881B23F01E7C592C00287B40 /* ShipDetailViewController.swift in Sources */,
 				4C45CA8A1D3A9A7F0030A41D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "swift-captain-morgans-relationships-lab/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FlatironSchool.swift-captain-morgans-relationships-lab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "swift-captain-morgans-relationships-lab/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FlatironSchool.swift-captain-morgans-relationships-lab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,8 +465,22 @@
 				8FD08F3A1E1EAF5D005FF50B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		881B23E51E7C570B00287B40 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				881B23E61E7C570B00287B40 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 881B23E61E7C570B00287B40 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4C45CA7E1D3A9A7F0030A41D /* Project object */;
 }
