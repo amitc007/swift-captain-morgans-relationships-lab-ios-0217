@@ -16,7 +16,7 @@ final class DataStore {
     
     
     fileprivate var pirates: [Pirate] = []
-    fileprivate var ships: [Ship] = []
+    var ships: [Ship] = []
     fileprivate var engines: [Engine] = []
     
     private init() {   }
@@ -71,9 +71,9 @@ final class DataStore {
                 let engine: Engine = NSEntityDescription.insertNewObject(forEntityName: "Engine", into: context) as! Engine
                 let types = ["Sail", "Gas", "Oars", "Nuclear"]
                 engine.engineType = types[Int(arc4random_uniform(4))]
-                engines.append(engine)
+                //engines.append(engine)
                 ship.engine = engine
-                ships.append(ship)
+                //ships.append(ship)
             }
         }
         

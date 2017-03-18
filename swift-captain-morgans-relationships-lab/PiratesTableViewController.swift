@@ -51,7 +51,7 @@ class PiratesTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         let selectedRow = tableView.indexPathForSelectedRow?.row
-        var destVC = segue.destination as! ShipsTableViewController
+        let destVC = segue.destination as! ShipsTableViewController
         destVC.pirate = singleton.getPirate(at: selectedRow!)
     }
     

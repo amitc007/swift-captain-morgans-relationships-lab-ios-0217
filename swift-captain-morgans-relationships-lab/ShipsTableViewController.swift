@@ -27,8 +27,8 @@ class ShipsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        guard let ships = pirate?.ships?.count else {return 10}
-        return ships
+        guard let shipsCount = pirate?.ships?.count else {return 10}
+        return shipsCount
     }
 
     
@@ -38,6 +38,7 @@ class ShipsTableViewController: UITableViewController {
         // Configure the cell...
         guard let ships = pirate?.ships else {print ("no pirate"); return cell}
         let shipsArray = Array(ships)
+        singleton.ships = Array(ships) as! [Ship]
         guard let ship = shipsArray[indexPath.row] as? Ship else {print("could not get ship"); return cell}
         cell.textLabel?.text = ship.name
 
@@ -47,11 +48,15 @@ class ShipsTableViewController: UITableViewController {
         // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    func prepare(for segue: UIStoryboardSegue, sender: UITableViewCell) {
-        guard let shipName = sender.textLabel?.text else {print ("something wrong w ship name");return}
-        guard let ship = singleton.getShip(by:shipName)  else {print("couldnt find ship");return}
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cellTapped = tableView.indexPathForSelectedRow?.row
+        //guard let shipName = sender.textLabel?.text else {print ("something wrong w ship name");return}
+        //guard let ship = singleton.getShip(by:shipName)  else {print("couldnt find ship");return}
         guard let destination = segue.destination as? ShipDetailViewController else {print("wrong dest");return}
-        destination.ship = ship
+        //destination.ship = ship
+        guard (pirate?.ships) != nil else { print ("no pirate"); return }
+        destination.ship = singleton.ships[cellTapped!]
+        
     }
  
 
